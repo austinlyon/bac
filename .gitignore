@@ -1,0 +1,14 @@
+#    Directories     #
+######################
+node_modules
+client/build
+
+# Logs and databases #
+######################
+logs
+*.log
+npm-debug.log*
+
+# OS generated files #
+######################
+.DS_Store*
