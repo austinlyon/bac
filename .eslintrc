@@ -1,5 +1,9 @@
 {
   "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "rules": {
     "brace-style": [0, "stroustrup"],
     "no-console": 0
