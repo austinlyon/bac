@@ -1,22 +1,20 @@
-import Webpack from 'webpack';
-import Path from 'path';
-
-const BUILD_DIR = Path.resolve(__dirname, 'client/build');
-const APP_DIR = Path.resolve(__dirname, 'client');
-
+// const path = require('path');
 const config = {
   module: {
     loaders: [
       {
-        test: /\.jsx?/,
-        include: APP_DIR,
+        test: /\.jsx?$/,
+        exclude: /(node_modules|bower_components)/,
         loader: 'babel',
+        query: {
+          presets: ['react', 'es2015'],
+        },
       },
     ],
   },
-  entry: `${APP_DIR}/index.jsx`,
+  entry: './client/index.jsx',
   output: {
-    path: BUILD_DIR,
+    path: './client/build',
     filename: 'bundle.js',
   },
 };
